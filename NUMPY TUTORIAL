@@ -1,0 +1,142 @@
+Numpy is a python library and used  for numerical analysis. NumPy is a Python library used for working with arrays.It also has functions for working in domain of linear algebra, fourier transform, and matrices.
+NumPy is a Python package. It stands Numerical Python.
+
+
+---->IMPORTING NUMPY
+import numpy as np    # import numpy as np (as aliscas)
+
+a = np.array([0,1,2,3])  # now creating an array of 4 size
+a                         # output will be  ---array([1,2,3,5])
+print(a)                  # output will be ---[0 1 2 3]
+
+
+a.ndim                 # ndim stands for the dimension ----output 1
+a.shape                # shape defines the basically the size -------  (4,)
+len(a)                 # len stands for length    ------ 4
+a.size                  #size denotes the size of the array ---- 4
+
+
+a = np.arange(10)      # now creating an arange of (10)
+a                      # output --- array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+print(a)               #  output --- ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+
+a = np.linspace(0,1,6)  # linspace  used to create an evenly spaced sequence in a specified interval.
+a                        #array([0. , 0.2, 0.4, 0.6, 0.8, 1. ])
+
+
+a = np.ones((3,3,))    # ones denotes the value of one
+a                      #output array([[1., 1., 1.],
+                                      [1., 1., 1.],
+                                      [1., 1., 1.]])
+                                      
+a = np.ones((3))
+a                     # array([[1., 1., 1.])
+
+b  = np.zeros((3,3))   #zeros denotes the value of zero
+    
+b                     #output array([[0., 0., 0.],
+                             [0., 0., 0.],
+                             [0., 0., 0.]])
+                             
+                             
+ c= np.diag([1,2,3,4]) # diag stands for diagonals which keeps trhe values in the diagonal
+ c                     #array([[1, 0, 0, 0],
+                               [0, 2, 0, 0],
+                               [0, 0, 3, 0],
+                               [0, 0, 0, 4]])
+                               
+                                 
+ a = np.random.rand(4) # gives the random values in float
+ a                     # output array([0.02435364, 0.12417246, 0.85100142, 0.42509947])
+ 
+ 
+--->DATATYPE
+ 
+ a = np.arange(10)
+ a.dtype()     #dtype('int32')
+ 
+ a = np.arange(10,dtype = 'float64')
+ a             #output will be in a float -----array([0., 1., 2., 3., 4., 5., 6., 7., 8., 9.])
+ 
+ 
+ d = np.array([1+2j])
+ d.dtype()        dtype('complex128')
+ 
+ -->INDEXING
+ a = np.arange(10)
+ a
+ print(a[5])        #Give the value of the index present at 5  -- 5
+ 
+ a = np.diag([1,2,3])
+ print(a[2,2])      #   #Give the value of the index present at (2,2) in the diagonal  -- 3
+ 
+-->SLICING
+ a = np.arange(10)
+ a
+ a[1:8:2]           # OUTPUT WILL BE  starts from 1 and ends 8-1 = 7 and have a step of 2 -- array([1, 3, 5, 7])
+ a[ : 8]            # array([0, 1, 2, 3, 4, 5, 6, 7])
+ a[ 0: ]            #  array([0, 1, 2, 3, 4, 5, 6, 7,8,9])
+ a[::2]             #  array([0, 2, 4, 6, 8])
+ 
+ 
+--> OPERATIONS
+ a = np.array([1,2,3,4])
+ a+1             OUPUT -- array([2, 3, 4, 5])
+ a-1             OUTPUT--  array([0, 1, 2, 3])
+ a/1             OUTPUT--  array([0, 1, 2, 3])
+ 
+ 
+--->CAMPARSIONS
+ a = np.array([5,7,2,9])
+b = np.array([5,7,2,9])
+
+a == b          OUTPUT--array([ True,  True,  True,  True])
+a>b             OUTPUT --array([ False,  False,False,False])
+a<b                OUTPUT --array([ False,  False,False,False])
+
+
+-->MIN() AND MAX()
+
+a.min()    #  give the minimum value
+a.max()     #  give the maxium value
+a.argmin()    #  give the minimum index
+a.argmax()    #  give the minimum index
+
+
+-->TRANSPOSE
+a = np.array([[1,3],[3,6]])
+a.T                array([[1, 3],
+                          [3, 6]])
+a.T.ravel()         array([1, 3, 3, 6])
+
+
+
+-->COPY AND VIEW ()
+
+a = np.array([1,2,3,5])
+x = a.copy()              #COPY IS JUST A NEW ARRAY
+a[0] = 23
+print(a)                   [23  2  3  5]
+print(x)                   [1  2  3  5]
+ 
+ N
+ a = np.array([1,2,3,5])
+x = a.view()             #VIEW IS THE VIEW OF THE ORIGINAL ARRAY
+a[0] = 23
+print(a)                  [23  2  3  5]
+print(x)                  [23  2  3  5]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
